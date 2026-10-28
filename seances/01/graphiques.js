@@ -115,6 +115,38 @@
   }
 
   const definitions = {
+    'e-convergence': {
+      defaults:{n:1},printDefaults:{n:100},height:320,
+      controls:[{...range('n','Nombre d’étapes n',0,8,1,'',0),stops:[1,2,4,10,12,52,100,365,1000]}],
+      draw(view,state) {
+        const n=state.n,logFactor=Math.log1p(1/n);
+        const discrete=integerPoints(n,k=>Math.exp(k*logFactor)).map(([k,y])=>[k/n,y]);
+        const times=[...new Set([...sample(0,1,240,t=>t).map(([t])=>t),...discrete.map(([t])=>t)])].sort((a,b)=>a-b);
+        const chart=line(view,{x:{min:0,max:1,ticks:[0,.25,.5,.75,1],format:t=>fmt(t,t===0||t===1?0:2),hoverFormat:t=>'t = '+fmt(t,4)},
+          y:{min:.9,max:3,ticks:[1,1.5,2,2.5,3],format:y=>fmt(y,Number.isInteger(y)?0:1)},
+          xTitle:'Temps t (une unité au total)',yTitle:'Niveau, départ 1',
+          series:[{name:'exp(t)',data:times.map(t=>[t,Math.exp(t)]),color:'blue',format:y=>fmt(y,6)},
+            {name:'Après chaque étape',data:discrete,color:'amber',format:y=>fmt(y,6)}],
+          refLines:[{y:Math.E,color:'slate',dash:'5 6'}],markers:[{x:1,y:Math.E,color:'blue',label:'e',anchor:'end',dx:-9,dy:-15}]});
+        // Entre deux mises à jour le niveau reste constant, puis augmente à k/n.
+        // Le chemin conserve toutes les étapes. Seules les pastilles sont espacées à grand n.
+        const path=chart.svg.querySelectorAll('.ch-line')[1];
+        path.setAttribute('d','M'+chart.S.X(0)+','+chart.S.Y(1)+discrete.slice(1).map(([t,y])=>' H'+chart.S.X(t)+' V'+chart.S.Y(y)).join(''));
+        path.setAttribute('stroke-width','2.8');
+        const dots=C.el('g',{'class':'mg-convergence-points','pointer-events':'none','aria-hidden':'true'},chart.svg);
+        const visibleSteps=Math.min(n,40);
+        for(let i=0;i<=visibleSteps;i++){
+          const k=Math.round(i*n/visibleSteps),[t,y]=discrete[k];
+          C.el('circle',{cx:chart.S.X(t),cy:chart.S.Y(y),r:n<=12?4.5:3,fill:C.col('amber')},dots);
+        }
+        const final=Math.exp(n*logFactor);
+        legend(view,[['exp(t)','blue'],['Multiplications successives','amber'],['Référence e','slate',true]]);
+        quantities(view,[['Valeur après n étapes',fmt(final,6)],['Écart e − valeur',fmt(Math.E-final,6)]]);
+        const percent=100/n,digits=Number.isInteger(percent)?0:n<=100?2:3;
+        const rounded=Math.abs(percent-Number(percent.toFixed(digits)))>1e-10;
+        view.note.textContent=fmt(n,0)+(n===1?' hausse de ':' hausses de ')+(rounded?'≈ ':'')+fmt(percent,digits)+' % sur une unité de temps.';
+      }
+    },
     variations: {
       defaults:{step:0}, height:310,
       controls:[],
@@ -290,7 +322,10 @@
         instance.controls.querySelectorAll('[data-control="'+control.id+'"]').forEach(button=>button.setAttribute('aria-pressed',String(instance.state[control.id]===button.value)));
       }else{
         const input=instance.controls.querySelector('input[data-control="'+control.id+'"]');
-        if(input)input.value=instance.state[control.id];
+        if(input){
+          input.value=control.stops?control.stops.indexOf(instance.state[control.id]):instance.state[control.id];
+          if(control.stops)input.setAttribute('aria-valuetext',fmt(instance.state[control.id],0)+(instance.state[control.id]===1?' étape':' étapes'));
+        }
         const output=instance.controls.querySelector('output[data-value="'+control.id+'"]');
         if(output)output.textContent=fmt(instance.state[control.id],control.digits)+control.unit;
       }
@@ -314,7 +349,7 @@
       }else{
         const id=unique+'-'+control.id;
         const label=document.createElement('label');label.htmlFor=id;label.textContent=control.label;
-        const input=document.createElement('input');Object.assign(input,{id,type:'range',min:control.min,max:control.max,step:control.step,value:instance.state[control.id]});input.dataset.control=control.id;
+        const input=document.createElement('input');Object.assign(input,{id,type:'range',min:control.min,max:control.max,step:control.step,value:control.stops?control.stops.indexOf(instance.state[control.id]):instance.state[control.id]});input.dataset.control=control.id;
         const output=document.createElement('output');output.htmlFor=id;output.dataset.value=control.id;
         row.append(label,input,output);
       }
@@ -328,7 +363,8 @@
     button('reset','Réinitialiser');controls.append(actions);
     controls.addEventListener('input',event=>{
       const input=event.target.closest('input[data-control]');if(!input)return;
-      instance.state[input.dataset.control]=Number(input.value);draw(instance);
+      const control=definitions[instance.key].controls.find(control=>control.id===input.dataset.control);
+      instance.state[input.dataset.control]=control.stops?control.stops[Number(input.value)]:Number(input.value);draw(instance);
     });
     controls.addEventListener('click',event=>{
       const button=event.target.closest('button');if(!button)return;
@@ -385,7 +421,7 @@
     if(printing)return;
     initAll();printing=true;savedPrint=new Map();
     for(const instance of instances.values()){
-      savedPrint.set(instance,clone(instance.state));instance.state=clone(definitions[instance.key].defaults);
+      savedPrint.set(instance,clone(instance.state));instance.state=clone(definitions[instance.key].printDefaults||definitions[instance.key].defaults);
       if(instance.key==='variations')instance.state.step=2;
       if(instance.key==='growth')instance.state.n=30;
       draw(instance);

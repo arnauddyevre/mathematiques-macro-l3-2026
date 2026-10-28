@@ -46,12 +46,13 @@
 .exponential-definition h2{font-size:32px;color:var(--navy);margin:0 0 22px}
 .exponential-definition p{font-size:30px;margin:0 0 18px}
 .exponential-definition .math-formula{margin:22px 0}
-.exponential-definition table{width:100%;border-collapse:collapse;font-size:29px;font-variant-numeric:tabular-nums}
-.exponential-definition th,.exponential-definition td{padding:7px 12px;text-align:center}
-.exponential-definition th{font-weight:400;border-bottom:1px solid var(--line)}
 .exponential-definition .math-condition{font-size:26px;margin:20px 0 0}
 .math-limit{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.2}
 .math-limit>span{font-size:.52em}
+.math-convergence-values{width:100%;border-collapse:collapse;font-size:29px;line-height:1.25;font-variant-numeric:tabular-nums}
+.math-convergence-values th,.math-convergence-values td{padding:8px 18px;text-align:right}
+.math-convergence-values th{color:var(--navy);font-size:26px;font-weight:400;border-bottom:1px solid var(--line)}
+.math-convergence-values th:first-child,.math-convergence-values td:first-child{text-align:left}
 @media print{
  .math-columns{height:620px}
  .math-solution [data-step]{opacity:1!important;visibility:visible!important}
