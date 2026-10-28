@@ -1,0 +1,59 @@
+/* Séance 1 : une idée à gauche, une illustration à droite. */
+.math-columns{display:grid;grid-template-columns:700px 700px;gap:40px;align-items:center;height:620px}
+.math-copy{min-width:0;max-width:100%;font-size:34px;line-height:1.45}
+.math-copy>p{margin:0 0 24px}
+.math-copy ul,.math-list{margin:0;padding-left:32px}
+.math-copy li,.math-list li{padding-left:8px;margin:0 0 24px}
+.math-copy li::marker,.math-list li::marker{color:var(--navy)}
+.math-copy strong{font-weight:600}
+.math-formula{font-size:42px;line-height:1.7;font-variant-numeric:lining-nums;margin:14px 0 24px}
+.math-formula:last-child{margin-bottom:0}
+.math-formula sup,.math-formula sub{font-size:.68em;line-height:0}
+.math-formula i,.math-reference i{font-style:italic}
+.math-formula math{font-size:1em;font-family:Palatino,"TeX Gyre Pagella Math",serif}
+.frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;text-align:center;line-height:1.25;margin:0 .12em;font-size:.88em}
+.frac>span:first-child{border-bottom:1.4px solid currentColor;padding:0 .16em .08em}
+.frac>span:last-child{padding:.08em .16em 0}
+.math-condition{font-size:26px;color:var(--muted);line-height:1.4;margin-top:18px}
+.math-reference{max-width:1350px;font-size:38px;line-height:1.55;margin-top:12px}
+.math-reference ul{padding-left:36px;margin:0}
+.math-reference li{padding-left:12px;margin:0 0 22px}
+.math-reference li::marker{color:var(--navy)}
+.math-reference table{width:100%;border-collapse:collapse;font-size:36px}
+.math-reference td{padding:14px 26px 14px 0;vertical-align:middle;border-bottom:1px solid var(--line)}
+.math-reference tr:last-child td{border-bottom:0}
+.math-reference th{text-align:left;font-size:26px;font-weight:400;color:var(--muted);padding-bottom:12px}
+.math-reference .math-formula{font-size:38px;line-height:1.65;margin:10px 0}
+.math-solution{margin-top:22px}
+.math-solution .math-formula{margin:12px 0}
+.math-solution [data-step]{transition:none}
+.math-copy.full-width{max-width:1360px}
+.math-copy.full-width .math-formula{font-size:46px}
+.math-links{display:flex;flex-wrap:wrap;gap:20px;margin-top:32px;font-size:27px}
+.math-links a{padding:12px 18px;border:1px solid var(--line);border-radius:8px;text-decoration:none}
+.math-links a:hover{background:var(--blue-w)}
+.section-open{background:var(--navy);color:#fff;padding:50px 100px 0}
+.section-open .slide-body{display:flex;align-items:center}
+.math-plan{width:100%;max-width:1400px}
+.math-kicker{font-size:24px;letter-spacing:.04em;color:#aeb9cf;margin:0 0 38px!important}
+.math-plan ol{margin:0;padding-left:48px;font-size:43px;line-height:1.4}
+.math-plan li{padding-left:15px;margin-bottom:24px;color:#aeb9cf}
+.math-plan li.active{color:#fff;font-weight:600}
+.section-open .slide-page-number{color:#c4ccdc}
+.section-open .slide-foot{color:#c4ccdc}
+.math-visual{width:700px;min-height:0;max-height:620px}
+.math-reserve-label{font-size:25px;color:var(--muted)}
+.exponential-definition h2{font-size:32px;color:var(--navy);margin:0 0 22px}
+.exponential-definition p{font-size:30px;margin:0 0 18px}
+.exponential-definition .math-formula{margin:22px 0}
+.exponential-definition table{width:100%;border-collapse:collapse;font-size:29px;font-variant-numeric:tabular-nums}
+.exponential-definition th,.exponential-definition td{padding:7px 12px;text-align:center}
+.exponential-definition th{font-weight:400;border-bottom:1px solid var(--line)}
+.exponential-definition .math-condition{font-size:26px;margin:20px 0 0}
+.math-limit{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1.2}
+.math-limit>span{font-size:.52em}
+@media print{
+ .math-columns{height:620px}
+ .math-solution [data-step]{opacity:1!important;visibility:visible!important}
+ .math-links a{text-decoration:underline;border:0;padding:0}
+}

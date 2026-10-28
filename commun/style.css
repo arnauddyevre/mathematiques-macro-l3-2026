@@ -1,0 +1,29 @@
+/* Composition propre au soutien. Référence visuelle : charte des diapositives 2026. */
+:root{--navy:#001F5F;--accent:#B45309;--ink:#000;--muted:#536078;--line:#D9DDE3;--blue-w:#F0F3F8;--font:Palatino,"Palatino Linotype","Book Antiqua","TeX Gyre Pagella",serif;--sans:var(--font);--serif:var(--font)}
+*{box-sizing:border-box}html,body{margin:0;height:100%;color:var(--ink);font-family:var(--font)}
+button,input,select{font:inherit}a{color:var(--navy)}button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.slide{width:1600px;height:900px;background:#fff;position:absolute;inset:0;padding:50px 80px 0;display:none;flex-direction:column;overflow:hidden;font-size:34px;line-height:1.36;font-variant-numeric:lining-nums}
+.slide-head{flex:0 0 auto;margin-bottom:30px}.slide-head h1{font-size:54px;line-height:1.08;font-weight:560;color:var(--navy);margin:0}
+.slide-body{flex:1 1 auto;min-height:0}.slide-body p{margin:0 0 22px}.slide-foot{flex:0 0 54px;margin-top:12px;display:flex;align-items:center;gap:24px;padding-right:140px}
+.source{font-size:13.5px;line-height:1.35;color:var(--muted);flex:1}.foot-right{display:flex;align-items:center;gap:16px}
+.slide-page-number{position:absolute;right:32px;bottom:16px;font-size:18px;color:var(--muted)}
+.slide.cover{padding:0}.math-cover{height:900px;padding:115px 90px 110px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.cover-label{margin:0;color:var(--accent);font-size:27px;letter-spacing:.04em}
+.math-cover h1{flex:1;display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:74px;font-weight:400;line-height:1.15;margin:35px 0;width:100%;max-width:1400px}
+.cover-details p{margin:0}.cover-author{font-size:32px}.cover-date{font-size:27px;margin-top:22px!important}.cover-time{font-size:25px;color:var(--muted);margin-top:10px!important}
+.p-zoom{position:relative}.p-zin{transform-origin:0 0}.chart text,.chart .ch-readout{font-family:var(--font)}
+.def,.math-box{padding:22px 28px;background:var(--blue-w);border:1px solid var(--line);border-radius:12px}.def .label{font-size:22px;font-weight:600;color:var(--navy)}
+.prov{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;border-radius:99px;padding:7px 12px;background:var(--blue-w);color:var(--navy)}.prov::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+[data-step]{opacity:0;visibility:hidden}[data-step].on,.show-all [data-step]{opacity:1;visibility:visible}[data-until].gone{display:none}.show-all [data-until].gone{display:revert}
+@keyframes fadeup{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+body.reading .ch-anim{animation:none!important;stroke-dashoffset:0!important}body.reading .ch-fade,body.reading .ch-pop{animation:none!important;opacity:1!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ch-anim{stroke-dashoffset:0!important}.ch-fade,.ch-pop{opacity:1!important;transform:none!important}}
+@page{size:1600px 900px;margin:0}
+@media print{
+ html,body{margin:0!important;padding:0!important;width:1600px!important;height:auto!important;background:#fff!important}
+ #toolbar,#panel,#progress,#blackout,#pres,#mode-flag{display:none!important}.slide-wrap{display:contents!important}
+ #viewport,#stage,body.reading #viewport,body.reading #stage{display:block!important;position:static!important;transform:none!important;box-shadow:none!important;width:1600px!important;height:auto!important;margin:0!important;padding:0!important;overflow:visible!important}
+ .slide,body.reading .slide{display:flex!important;position:relative!important;transform:none!important;zoom:1!important;width:1600px!important;height:900px!important;margin:0!important;box-shadow:none!important;break-after:page;break-inside:avoid;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .slide:last-child{break-after:auto}[data-step]{opacity:1!important;visibility:visible!important}
+ .ch-anim{animation:none!important;stroke-dashoffset:0!important}.ch-fade,.ch-pop,.ch-bar{animation:none!important;opacity:1!important;transform:none!important}.ch-readout,.ch-guide{display:none!important}
+}
