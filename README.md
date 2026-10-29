@@ -22,8 +22,9 @@ Quatre séances sur Zoom, de 8 h à 9 h 30, heure de Paris. Les séances sont en
 - Séance 2 : supports à venir.
 - Séance 3 : supports à venir.
 - Séance 4 : supports à venir.
+- Séance 1 : [enregistrement](https://hec-fr.zoom.us/rec/share/CpAm8EbOjCnh-dAqGoiqT7dMK39bv6_AXzwd8DbIf7z0qq-OhSdYJFGnqso7XbMc.ZM7nqVQyBa89vtGU).
 
-Les enregistrements seront ajoutés lorsqu’ils seront disponibles.
+Les enregistrements des prochaines séances seront ajoutés lorsqu’ils seront disponibles.
 
 ## Complément de macroéconomie
 
@@ -31,6 +32,7 @@ D’où vient la croissance du niveau de vie ?
 
 - [Énoncé PDF](https://arnauddyevre.github.io/macroeconomie-l3-2026/chapitre-1/exercices/niveau_vie_exercice_etudiant.pdf).
 - [Exercice et solutions PDF](https://arnauddyevre.github.io/macroeconomie-l3-2026/supports-enseignant-362f9e78756efc9147313d8e/session-1/exercices/niveau_vie_exercice_corrige.pdf).
+- [Exercice annoté pendant la séance du 29 octobre](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/01/exercices/niveau_vie_exercice_annote.pdf).
 - [Diapositives de l’exercice](https://arnauddyevre.github.io/macroeconomie-l3-2026/chapitre-1/#exercice-niveau-vie-1).
 
 [Cours de macroéconomie](https://arnauddyevre.github.io/macroeconomie-l3-2026/)
@@ -38,4 +40,4 @@ D’où vient la croissance du niveau de vie ?
 Le programme s’adapte aux questions. Vous pouvez écrire à [dyevre@hec.fr](mailto:dyevre@hec.fr).
 Entre les séances, relisez les supports et revoyez les enregistrements. Aucun devoir supplémentaire n’est demandé.
 
-Version du 28 octobre 2026.
+Version du 29 octobre 2026.
