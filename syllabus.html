@@ -14,9 +14,8 @@
   <a class="skip" href="#contenu">Aller au contenu</a>
   <div class="page" id="haut">
     <nav class="topbar" aria-label="Ressources du cours"><a href="https://arnauddyevre.github.io/mathematiques-macro-l3-2026/">Accueil du soutien</a><a class="download" href="syllabus.pdf">Télécharger le PDF</a></nav>
-    <header><p class="label">HEC Paris · Licence 3 · Automne 2026</p><h1>Mathématiques
-appliquées à la macroéconomie</h1><p class="subtitle">Soutien et
-révisions</p></header>
+    <header><h1>Mathématiques appliquées à la
+macroéconomie</h1></header>
     <div class="layout">
       <aside class="toc"><details open><summary>Dans ce syllabus</summary><nav aria-label="Sommaire"><ul>
 <li><a href="#présentation" id="toc-présentation">Présentation</a></li>
@@ -57,8 +56,9 @@ d’assiduité propres</strong>.</p>
 <ul>
 <li><p>Passer des pourcentages aux taux de croissance et utiliser les
 logarithmes pour décomposer une évolution.</p></li>
-<li><p>Calculer et interpréter une dérivée, une élasticité et une
-dérivée partielle simple.</p></li>
+<li><p>Utiliser les dérivées et les dérivées partielles pour résoudre le
+problème de l’entreprise, puis trouver l’état stationnaire de
+Solow.</p></li>
 <li><p>Manipuler des suites et des sommes, puis calculer un équilibre
 dans un modèle simple.</p></li>
 <li><p>Mobiliser ces outils dans un exercice de macroéconomie et
@@ -66,10 +66,10 @@ expliquer les étapes du raisonnement.</p></li>
 </ul>
 <h2 class="unnumbered" id="déroulement-et-questions">Déroulement et
 questions</h2>
-<p>Chaque séance consacre environ la moitié du temps aux rappels et
-l’autre moitié aux exercices et à leur correction. Les calculs sont
-détaillés et les résultats sont reliés à leur signification
-économique.</p>
+<p>Les séances associent des rappels et des calculs guidés. La deuxième
+séance suit pas à pas la résolution du modèle de Solow, sans exercice
+autonome. Chaque opération est explicitée : dériver, annuler,
+substituer, diviser et isoler une inconnue.</p>
 <p>Le programme ci-dessous est indicatif. Vous êtes invités à m’envoyer
 vos questions, les passages du cours ou les exercices qui vous posent
 difficulté à <a href="mailto:dyevre@hec.fr">dyevre@hec.fr</a>. Nous
@@ -78,12 +78,13 @@ pouvez également poser vos questions pendant le cours.</p>
 <h2 class="unnumbered"
 id="supports-et-travail-entre-les-séances">Supports et travail entre les
 séances</h2>
-<p>Après chaque séance, les supports <strong>avec les solutions</strong>
-ainsi que l’enregistrement seront mis à votre disposition sur le <a
+<p>Les supports <strong>avec les solutions</strong> sont mis à votre
+disposition sur le <a
 href="https://arnauddyevre.github.io/mathematiques-macro-l3-2026/">site
-du soutien mathématique</a>. Entre les séances, le seul travail demandé
-est de relire les supports. Vous pouvez vous appuyer sur les solutions
-et l’enregistrement pour reprendre un passage et préparer vos
+du soutien mathématique</a>. Les enregistrements y sont ajoutés après
+chaque séance. Entre les séances, le seul travail demandé est de relire
+les supports. Vous pouvez vous appuyer sur les solutions et
+l’enregistrement pour reprendre un passage et préparer vos
 questions.</p>
 <p><strong>Séance du 29 octobre :</strong> <a
 href="https://hec-fr.zoom.us/rec/share/CpAm8EbOjCnh-dAqGoiqT7dMK39bv6_AXzwd8DbIf7z0qq-OhSdYJFGnqso7XbMc.ZM7nqVQyBa89vtGU">enregistrement
@@ -111,7 +112,8 @@ de Paris</strong>.</p>
 <tr>
 <td style="text-align: left;">2</td>
 <td style="text-align: left;">Jeudi 12 novembre 2026</td>
-<td style="text-align: left;">Dérivées et élasticités</td>
+<td style="text-align: left;">Résoudre un modèle économique : équilibre
+et optimisation</td>
 </tr>
 <tr>
 <td style="text-align: left;">3</td>
@@ -142,18 +144,33 @@ pour les petits taux. Nous utiliserons
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{d\ln x(t)}{dt}=\frac{x&#39;(t)}{x(t)}</annotation></semantics></math>
 pour une grandeur positive. Les applications porteront sur le PIB par
 habitant et le temps de doublement.</p>
-<h3 class="unnumbered" id="dérivées-et-élasticités">2. Dérivées et
-élasticités</h3>
-<p>Nous reprendrons les dérivées des puissances, du logarithme et de
-l’exponentielle, puis les règles du produit, du quotient et de la
-composition. Nous interpréterons l’élasticité
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>x</mi><msup><mi>f</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><annotation encoding="application/x-tex">\frac{xf&#39;(x)}{f(x)}</annotation></semantics></math>
-comme une sensibilité en pourcentage. Une dérivée partielle simple
-permettra d’étudier l’effet d’un facteur lorsque les autres restent
-constants. Une fonction de production Cobb-Douglas servira à distinguer
-productivité moyenne et productivité marginale, et à comprendre le rôle
-de la productivité globale des facteurs (PGF). Ces applications ne
-nécessiteront pas d’optimisation formelle.</p>
+<h3 class="unnumbered"
+id="résoudre-un-modèle-économique-équilibre-et-optimisation">2. Résoudre
+un modèle économique : équilibre et optimisation</h3>
+<p>Nous résoudrons Solow en temps continu, avec une PGF multiplicative
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+et un emploi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+constants. Pour maximiser le profit, nous identifierons les choix,
+dériverons, annulerons les dérivées et isolerons les rémunérations
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+et
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math>.
+Nous passerons aux grandeurs par travailleur,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mi>K</mi><mi>/</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">k=K/L</annotation></semantics></math>
+et
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>Y</mi><mi>/</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">y=Y/L</annotation></semantics></math>,
+puis poserons
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>k</mi><mo accent="true">̇</mo></mover><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\dot{k}=0</annotation></semantics></math>
+pour trouver le capital stationnaire positif
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>k</mi><mo>*</mo></msup><annotation encoding="application/x-tex">k^*</annotation></semantics></math>.
+La substitution donnera ensuite
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>y</mi><mo>*</mo></msup><annotation encoding="application/x-tex">y^*</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>w</mi><mo>*</mo></msup><annotation encoding="application/x-tex">w^*</annotation></semantics></math>
+et
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>r</mi><mo>*</mo></msup><annotation encoding="application/x-tex">r^*</annotation></semantics></math>.
+Les calculs restent symboliques ; les rappels de dérivation et de
+puissances interviennent au moment utile.</p>
 <h3 class="unnumbered" id="suites-sommes-et-équilibres">3. Suites,
 sommes et équilibres</h3>
 <p>Nous étudierons les suites géométriques et affines, leur point fixe

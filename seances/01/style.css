@@ -58,3 +58,13 @@
  .math-solution [data-step]{opacity:1!important;visibility:visible!important}
  .math-links a{text-decoration:underline;border:0;padding:0}
 }
+
+/* Point d’arrêt confirmé par Arnaud le 11 novembre 2026. */
+#suite-exercice{overflow:hidden}
+#suite-exercice::after{content:"fin du cours 1";position:absolute;top:95px;right:-90px;width:400px;padding:10px 0;transform:rotate(45deg);background:#B45309;color:#fff;font:700 26px/1.2 Palatino,"Palatino Linotype","Book Antiqua",serif;text-align:center;white-space:nowrap;pointer-events:none;z-index:2}
+
+/* Calculs à gauche, explications à droite ; révélations communes par ligne. */
+#croissance-continue .continuous-derivation{display:grid;height:100%;grid-template-rows:1fr 1.3fr 1.3fr;gap:18px}
+#croissance-continue .continuous-row{display:grid;grid-template-columns:700px 700px;gap:40px;align-items:center}
+#croissance-continue .continuous-row p{font-size:36px;line-height:1.3;margin:0}
+#croissance-continue .math-formula{font-size:42px;line-height:1.35;margin:0}

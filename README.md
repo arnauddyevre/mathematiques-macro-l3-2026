@@ -11,7 +11,7 @@ Quatre séances sur Zoom, de 8 h à 9 h 30, heure de Paris. Les séances sont en
 | Séance | Date | Programme |
 |---|---|---|
 | 1 | jeudi 29 octobre 2026 | Logarithmes et croissance |
-| 2 | jeudi 12 novembre 2026 | Dérivées et élasticités |
+| 2 | jeudi 12 novembre 2026 | Résoudre un modèle économique : équilibre et optimisation |
 | 3 | jeudi 19 novembre 2026 | Suites et équilibres |
 | 4 | jeudi 26 novembre 2026 | Révisions pour l’examen |
 
@@ -19,7 +19,7 @@ Quatre séances sur Zoom, de 8 h à 9 h 30, heure de Paris. Les séances sont en
 
 - Syllabus : [HTML](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/syllabus.html) · [PDF](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/syllabus.pdf).
 - Séance 1 : [diapositives](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/01/index.html) · [PDF avec les solutions](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/01/cours.pdf).
-- Séance 2 : supports à venir.
+- Séance 2 : [diapositives](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/02/index.html) · [PDF avec les solutions](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/02/cours.pdf).
 - Séance 3 : supports à venir.
 - Séance 4 : supports à venir.
 - Séance 1 : [enregistrement](https://hec-fr.zoom.us/rec/share/CpAm8EbOjCnh-dAqGoiqT7dMK39bv6_AXzwd8DbIf7z0qq-OhSdYJFGnqso7XbMc.ZM7nqVQyBa89vtGU).
@@ -40,4 +40,4 @@ D’où vient la croissance du niveau de vie ?
 Le programme s’adapte aux questions. Vous pouvez écrire à [dyevre@hec.fr](mailto:dyevre@hec.fr).
 Entre les séances, relisez les supports et revoyez les enregistrements. Aucun devoir supplémentaire n’est demandé.
 
-Version du 29 octobre 2026.
+Version du 11 novembre 2026.
