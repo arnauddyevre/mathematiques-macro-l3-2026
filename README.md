@@ -4,7 +4,7 @@ Arnaud Dyèvre · Licence 3 · Automne 2026
 
 **[Ouvrir les supports du soutien](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/)**
 
-Quatre séances sur Zoom, de 8 h à 9 h 30, heure de Paris. Les séances sont enregistrées.
+Quatre séances sur Zoom, de 8 h à 9 h 30, heure de Paris. Les enregistrements disponibles sont liés ci-dessous.
 
 [Rejoindre la séance sur Zoom](https://hec-fr.zoom.us/j/93011136037?pwd=wQGfQy9yDaXezqbJREj5pAg8mzJa5s.1)
 
@@ -34,6 +34,10 @@ Exercice du cours « Mesurer la richesse nationale » : **D’où vient la crois
 [Lire les diapositives](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/02/index.html) · [Diapositives en pdf](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/02/cours.pdf).
 
 [Notes de cours (pdf)](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/02/notes_de_cours.pdf).
+
+[Résumé illustré du cours (pdf)](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/02/resume_cours_2026-11-12.pdf).
+
+Enregistrement indisponible.
 
 ### Séance 3 — Suites et équilibres
 
