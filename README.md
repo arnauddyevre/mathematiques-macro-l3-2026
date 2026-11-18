@@ -12,7 +12,7 @@ Quatre séances sur Zoom, de 8 h à 9 h 30, heure de Paris. Les enregistrements 
 |---|---|---|
 | 1 | jeudi 29 octobre 2026 | Logarithmes et croissance |
 | 2 | jeudi 12 novembre 2026 | Résoudre un modèle économique : équilibre et optimisation |
-| 3 | jeudi 19 novembre 2026 | Suites et équilibres |
+| 3 | jeudi 19 novembre 2026 | Équilibres et statique comparative |
 | 4 | jeudi 26 novembre 2026 | Révisions pour l’examen |
 
 ## Documents
@@ -39,9 +39,9 @@ Exercice du cours « Mesurer la richesse nationale » : **D’où vient la crois
 
 Enregistrement indisponible.
 
-### Séance 3 — Suites et équilibres
+### Séance 3 — Équilibres et statique comparative
 
-Supports à venir.
+[Lire les diapositives](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/03/index.html) · [Diapositives en pdf](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/03/cours.pdf).
 
 ### Séance 4 — Révisions pour l’examen
 

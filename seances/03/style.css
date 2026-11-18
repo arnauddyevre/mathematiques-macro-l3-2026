@@ -1,0 +1,100 @@
+/* Séance 3 — calculs à gauche, explications à droite, comme à la séance 2. */
+.seance3 i{font-style:italic}
+.seance3 .slide-body{display:flex;flex-direction:column}
+.seance3 .derivation{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-evenly;gap:22px}
+.seance3 .derivation-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;align-items:center}
+.seance3 .equation{font-size:42px;line-height:1.6;font-variant-numeric:lining-nums;white-space:nowrap}
+.seance3 .equation sup,.seance3 .equation sub{font-size:.68em;line-height:0}
+.seance3 .frac{display:inline-flex;flex-direction:column;align-items:center;text-align:center;vertical-align:middle;line-height:1.2;margin:0 .1em;font-size:.9em}
+.seance3 .frac>span:first-child{border-bottom:1.4px solid currentColor;padding:0 .13em .08em}
+.seance3 .frac>span:last-child{padding:.08em .13em 0}
+/* La barre de fraction couvre le plus large des deux termes. */
+.seance3 .frac>span{align-self:stretch}
+.seance3 .nw{white-space:nowrap}
+.seance3 .explanation{font-size:32px;line-height:1.32}
+.seance3 .explanation p{margin:0}
+.seance3 .explanation strong{color:var(--navy);font-weight:600}
+.seance3 .result{display:inline-block;background:var(--blue-w);border-radius:10px;padding:8px 16px;color:var(--navy)}
+.seance3.four-rows .derivation{gap:12px}
+.seance3.four-rows .equation{font-size:37px}
+.seance3.four-rows .explanation{font-size:29px}
+.seance3.wide-math .derivation-row{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:36px}
+.seance3.wide-math .equation{font-size:33px}
+.seance3 .slide-intro{font-size:31px;line-height:1.3;margin:0 0 10px}
+
+/* Couleurs des grandeurs, reprises du chapitre 3 de macro.
+   Dette (charte.css du chapitre) : i, b, τ, g, π. Croix : production, dépense, consommation, fuites, multiplicateur. */
+.seance3 .k-qi{color:#B45309;font-weight:650}
+.seance3 .k-qb{color:#2E7D5B;font-weight:650}
+.seance3 .k-qt{color:#7A3E9D;font-weight:650}
+.seance3 .k-qg{color:#001F5F;font-weight:650}
+.seance3 .k-qp{color:#B0285A;font-weight:650}
+.seance3 .k-vol{color:#001F5F}
+.seance3 .k-dep{color:#526780}
+.seance3 .k-conso{color:#001F5F;font-weight:650}
+.seance3 .k-moins{color:#B45309;font-weight:650}
+.seance3 .k-res{color:#000;font-weight:700}
+
+/* Encadré bleu de définition. */
+.seance3 .definition{margin-top:14px;padding:16px 26px;background:var(--blue-w);border:1px solid var(--line);border-radius:12px;font-size:28px;line-height:1.35}
+.seance3 .definition p{margin:0}
+.seance3 .definition .definition-label{font-size:20px;font-weight:700;color:var(--navy);letter-spacing:.04em;margin-bottom:6px}
+.seance3 .definition strong{color:var(--navy);font-weight:600}
+
+/* Séparations de parties, reprises de la séance 1. */
+.section-open{background:var(--navy);color:#fff;padding:50px 100px 0}
+.section-open .slide-body{display:flex;align-items:center}
+.math-plan{width:100%;max-width:1400px}
+.math-plan ol{margin:0;padding-left:48px;font-size:43px;line-height:1.4}
+.math-plan li{padding-left:15px;margin-bottom:24px;color:#aeb9cf}
+.math-plan li.active{color:#fff;font-weight:600}
+.math-plan i{font-style:italic}
+.section-open .slide-page-number{color:#c4ccdc}
+.section-open .slide-foot{color:#c4ccdc}
+
+/* Énoncés d’exercice. */
+.seance3 .exercise-statement{flex:1;display:flex;flex-direction:column;justify-content:space-evenly;font-size:34px;line-height:1.4}
+.seance3 .exercise-statement .model .equation{font-size:46px;line-height:1.55}
+.seance3 .model-legend{font-size:29px;line-height:1.4;color:var(--muted);margin:0}
+.seance3 .questions{font-size:34px;line-height:1.4;padding-left:42px;margin:0}
+.seance3 .questions li{margin-bottom:18px;padding-left:8px}
+.seance3 .questions li::marker{color:var(--accent);font-weight:700}
+
+/* Exercice chiffré : données et questions à gauche, solutions à droite. */
+.seance3 .exercise-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;flex:1;align-items:start}
+.seance3 .data-table{border-collapse:collapse;font-size:30px;width:100%;font-variant-numeric:lining-nums tabular-nums}
+.seance3 .data-table th,.seance3 .data-table td{padding:9px 14px;border-bottom:1px solid var(--line);text-align:right}
+.seance3 .data-table th{font-weight:600;color:var(--navy)}
+.seance3 .data-table th:first-child,.seance3 .data-table td:first-child{text-align:left}
+.seance3 .exercise-data .questions{font-size:30px;margin-top:28px}
+.seance3 .math-solutions{display:flex;flex-direction:column;gap:30px}
+.seance3 .math-solution .equation{font-size:37px;line-height:1.45}
+.seance3 .math-solution p{font-size:29px;line-height:1.35;margin:6px 0 0}
+
+/* Synthèse. */
+.seance3 .synthesis{width:100%;border-collapse:collapse;font-size:36px;line-height:1.4;margin-top:24px}
+.seance3 .synthesis th{font-size:26px;color:var(--muted);font-weight:400;text-align:left;padding:0 20px 16px}
+.seance3 .synthesis td{padding:64px 20px;border-top:1px solid var(--line);vertical-align:middle}
+.seance3 .synthesis td:first-child{color:var(--navy);font-weight:600;width:270px}
+.seance3 .synthesis .frac{font-size:.85em}
+.seance3 .synthesis-method{font-size:35px;line-height:1.4;margin:64px 0 0}
+.seance3 .synthesis-method strong{color:var(--navy);font-weight:600}
+
+/* Graphique interactif du ratio de dette stationnaire. */
+.seance3 .diagram-layout{display:grid;grid-template-columns:560px 820px;gap:40px;align-items:center;flex:1}
+.seance3 .diagram-copy{font-size:29px;line-height:1.35}
+.seance3 .diagram-copy p{margin:0 0 18px}
+.seance3 .diagram-copy .equation{font-size:40px;margin:0 0 22px}
+.seance3 .diagram-copy strong{color:var(--navy);font-weight:600}
+.seance3 .diagram-reading{color:var(--muted)}
+#dette-chart{width:820px;height:450px}
+.seance3 .chart-controls{display:grid;grid-template-columns:auto minmax(0,1fr) auto minmax(0,1fr);gap:10px 14px;align-items:center;font-size:20px;margin-top:10px}
+.seance3 .chart-controls input{accent-color:var(--accent);width:100%}
+.seance3 .chart-controls button{grid-column:1/-1;justify-self:start;background:var(--blue-w);border:1px solid var(--line);border-radius:8px;padding:7px 12px;color:var(--navy);font:inherit}
+#dette-reading{font-size:22px;line-height:1.3;min-height:58px;margin:10px 0 0}
+.seance3 .print-reading{display:none;font-size:23px}
+@media print{
+ .seance3 .chart-controls,#dette-reading{display:none!important}
+ .seance3 .print-reading{display:block;margin-top:14px!important}
+ .seance3 .math-solution{opacity:1!important;visibility:visible!important}
+}
