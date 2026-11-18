@@ -68,3 +68,7 @@
 #constantes-capital .derivative-note p{margin:0}
 #constantes-capital .derivative-note p+p{margin-top:6px}
 #constantes-capital .derivative-note strong{color:#B45309}
+
+/* Point d’arrêt du 12 novembre 2026, d’après le résumé publié ; demandé par Arnaud le 18 novembre. */
+#capital-stationnaire{overflow:hidden}
+#capital-stationnaire::after{content:"fin du cours 2";position:absolute;top:95px;right:-90px;width:400px;padding:10px 0;transform:rotate(45deg);background:#B45309;color:#fff;font:700 26px/1.2 Palatino,"Palatino Linotype","Book Antiqua",serif;text-align:center;white-space:nowrap;pointer-events:none;z-index:2}

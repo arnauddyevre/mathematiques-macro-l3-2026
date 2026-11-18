@@ -55,4 +55,4 @@ Les enregistrements des prochaines séances seront ajoutés lorsqu’ils seront 
 Le programme s’adapte aux questions. Vous pouvez écrire à [dyevre@hec.fr](mailto:dyevre@hec.fr).
 Entre les séances, relisez les supports et revoyez les enregistrements. Aucun devoir supplémentaire n’est demandé.
 
-Version du 12 novembre 2026.
+Version du 18 novembre 2026.
