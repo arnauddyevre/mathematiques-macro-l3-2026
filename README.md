@@ -43,6 +43,10 @@ Enregistrement indisponible.
 
 [Lire les diapositives](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/03/index.html) · [Diapositives en pdf](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/03/cours.pdf).
 
+[Notes de cours (pdf)](https://arnauddyevre.github.io/mathematiques-macro-l3-2026/seances/03/notes_de_cours.pdf).
+
+[Voir l’enregistrement de la séance](https://hec-fr.zoom.us/rec/share/vYK155J5Q_IQEWhiphIQOdu0gSVRpAPoMXkgpfrSry5KYA0aqoTwuCpJvTs4Ra4t.wA7usqkuzgQkSqZe).
+
 ### Séance 4 — Révisions pour l’examen
 
 Supports à venir.
